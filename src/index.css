@@ -71,4 +71,18 @@ body{
   cursor: pointer;
   width: 40%;
 }
-
+.posts{
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+}
+.postCard{
+  width: 28%;
+  margin-bottom: 15px;
+}
+.mainBlock{
+  margin-bottom: 100px;
+}
+.adv{
+  margin-bottom: 20px;
+}

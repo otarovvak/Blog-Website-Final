@@ -5,6 +5,7 @@ import { SignUpPage } from "../page/SignUp";
 import { LogInPage } from "../page/LogIn";
 import { AddPost } from "../page/AddPost";
 import { Category } from "../page/Category";
+import React from "react";
 
 export const router = createBrowserRouter([
   {

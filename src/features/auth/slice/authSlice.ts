@@ -1,4 +1,3 @@
-// authSlice.ts (converted to TypeScript)
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 interface AuthState {
@@ -12,7 +11,7 @@ const loadToken = () => {
 
 const initialState: AuthState = {
   accessToken: loadToken(),
-  refreshToken: "", // Load the refresh token in a similar way if needed
+  refreshToken: "",
 };
 export const authSlice = createSlice({
   name: "auth",
@@ -36,7 +35,6 @@ export const authSlice = createSlice({
     },
     initializeAuth: (state) => {
       state.accessToken = loadToken();
-      // Initialize the refresh token similarly if you have one
     },
   },
 });

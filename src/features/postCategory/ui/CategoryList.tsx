@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { getCategories } from "../api/getCategories";
 
 import type { Category } from "../model/category";
+import React from "react";
 
 export const CategoryList = () => {
   const [categories, setCategories] = useState<Category[]>([]);

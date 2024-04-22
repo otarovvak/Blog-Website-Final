@@ -5,6 +5,7 @@ import { PostCard } from "./postCard";
 import { getPosts } from "../api/getPosts";
 
 import type { Post } from "../model/post";
+import React from "react";
 
 export const PostList = () => {
   const [posts, setPosts] = useState<Post[]>([]);
@@ -16,7 +17,7 @@ export const PostList = () => {
   }, []);
 
   return (
-    <div>
+    <div className="flex posts ">
       {posts.map((post) => (
         <PostCard
           imgUrl={post.imgUrl}

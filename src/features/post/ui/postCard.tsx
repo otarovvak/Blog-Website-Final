@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getCategories } from "../../postCategory/api/getCategories";
+import React from "react";
 
 export interface Props {
   imgUrl: string;
@@ -56,17 +57,18 @@ export const PostCard = ({
   }, [categoryId]);
 
   return (
-    <div className="container grid grid-cols-4 ">
-      <div className="postCard col-span-1  bg-white shadow rounded post flex-col p-10 ">
-        <img src={imgUrl} alt="" />
-        <p className="bg-blue-600 max-w-fit px-3 text-white text-sm rounded mt-5 mb-3">
-          {categoryName}
-        </p>
-        <h2 className="text-xl font-semibold">{title}</h2>
-        <div className="author flex items-center mt-3">
-          <p className="gray text-base ">{username}</p>
-          <p className="release-date gray pl-3">{formattedDate}</p>
-        </div>
+    <div
+      onClick={() => {}}
+      className="postCard ml-8 bg-white shadow rounded post flex-col p-10"
+    >
+      <img src={imgUrl} alt="" />
+      <p className="bg-blue-600 max-w-fit px-3 text-white text-sm rounded mt-5 mb-3">
+        {categoryName}
+      </p>
+      <h2 className="text-xl font-semibold">{title}</h2>
+      <div className="author flex items-center mt-3">
+        <p className="gray text-base ">{username}</p>
+        <p className="release-date gray pl-3">{formattedDate}</p>
       </div>
     </div>
   );

@@ -2,12 +2,13 @@ import { PostList } from "../features/post/ui/postList";
 import { Nav } from "../components/Nav";
 import { Advertisement } from "../components/Advertisement";
 import "../index.css";
+import React from "react";
 
 export const MainPage = () => {
   return (
     <div>
       <Nav></Nav>
-      <div className="container relative">
+      <div className="container relative mainBlock">
         <img src="image.png" alt="" className="w-full" />
 
         <div className="absolute -bottom-12 left-12 mt-10  post-main flex-col p-10 bg-white shadow rounded">
@@ -27,7 +28,9 @@ export const MainPage = () => {
         </div>
       </div>
       <Advertisement></Advertisement>
-      <PostList></PostList>
+      <div className="container mt-10">
+        <PostList></PostList>
+      </div>
     </div>
   );
 };

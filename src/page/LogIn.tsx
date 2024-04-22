@@ -1,8 +1,9 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Import useNavigate
+import { useNavigate } from "react-router-dom";
 import { logIn } from "../features/auth";
 import { useDispatch } from "react-redux";
 import { setTokens } from "../features/auth/slice/authSlice";
+import React from "react";
 
 export const LogInPage = () => {
   const [username, setUsername] = useState("");
@@ -13,15 +14,12 @@ export const LogInPage = () => {
 
   const logInFn = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    try {
-      const tokens = await logIn(username, password);
 
-      if (tokens) {
-        dispatch(setTokens(tokens));
-        navigate("/");
-      }
-    } catch (error) {
-      // Handle error (e.g., display an error message)
+    const tokens = await logIn(username, password);
+
+    if (tokens) {
+      dispatch(setTokens(tokens));
+      navigate("/");
     }
   };
 
